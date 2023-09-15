@@ -1,0 +1,32 @@
+React Native Notes:
+
+Styling in React Native:
+
+-You can give a normal css in component. Like <Text style ={{margin: 10}}>Hello</Text>
+-You can give a style sheet css object in component. Like <Text style ={styles.textCss}>Hello</Text>
+
+--Useful Links for styling.
+1: https://reactnative.dev/docs/style
+2. https://reactnative.dev/docs/colors
+3. https://reactnative.dev/docs/view (View component basics)
+4. https://reactnative.dev/docs/view#style
+5. https://reactnative.dev/docs/view-style-props
+-4. and 5. links are for style properties that supports on react native.
+
+
+Flexbox:
+-It has 2 axises. Cross Axis and Main Axis Flex Direction column and row. top to bottom or left to right.
+
+
+-FlatList:
+-It uses for very large amount of data. More powerful than scrollView because flatlist just renders the item when you need.
+It makes the application much more performance.
+It needs the key property. There is 2 options to set the key prop.
+1. Create the data with object type and give key property and you don't need to give key property in flatlist.
+2. keyExtractor field:
+- Let's say we have a data which contains id field that must be unique.
+- Flatlist needs the key property built in.
+- you need to set 
+keyExtractor={(item, index) =>{
+  return item.id; // id or something else doesn't matter.
+}}
